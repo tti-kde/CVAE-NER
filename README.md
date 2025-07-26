@@ -1,17 +1,23 @@
 # Enhancing NER by Harnessing Multiple Datasets with Conditional Variational Autoencoders
 
-基本的なNERのコードは[PURE](https://github.com/princeton-nlp/PURE/tree/main)を基に作成
+The basic NER code is created based on [PURE](https://github.com/princeton-nlp/PURE/tree/main)
 
 ## Docker
-docker/で以下のコマンドでイメージ作成
+
+Create image with the following command in docker/
+
 ```
 docker build -t image_name .
 ```
-コンテナ起動
+
+Start container
+
 ```
 docker run --gpus all --rm -it image_name /bin/bash
 ```
-実験実行
+
+Run experiment
+
 ```
 accelerate launch src/run_entity.py \
     --do_train \
